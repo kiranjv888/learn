@@ -10,7 +10,7 @@ pipeline{
 		}
 		stage("configutation"){
 			steps{
-				sh 'cmake -B build -s'
+				sh 'cmake -B build -S'
 			}
 		}
 		stage("Build"){
