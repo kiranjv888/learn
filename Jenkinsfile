@@ -22,7 +22,7 @@ pipeline{
 			steps{
 				sh './build/run_tests'
 			}	
-	
+		}	
 	}
 	
 	post{
