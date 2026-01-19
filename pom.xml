@@ -54,9 +54,12 @@
                         <phase>deploy</phase>
                         <goals><goal>exec</goal></goals>
                         <configuration>
-                            <executable>scp</executable>
+				<executable>scp</executable>
+				<successCodes>
+					<successCode>0</successCode>
+				</successCodes>
                             <arguments>
-                                <argument>-o</argument><argument>StrictHostKeyChecking=no</argument>
+                                <argument>-v</argument> <argument>-o</argument><argument>StrictHostKeyChecking=no</argument>
                                 <argument>-i</argument><argument>${pem.key.path}</argument>
                                 <argument>target/build/${executable.name}</argument>
                                 <argument>ec2-user@${remote.server.ip}:/home/ec2-user/</argument>
